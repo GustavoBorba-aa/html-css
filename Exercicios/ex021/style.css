@@ -1,0 +1,229 @@
+@charset "UTF-8"; /* Define a codificação do arquivo como UTF-8 */
+
+*{
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Garante que largura e altura incluam padding e borda */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+}
+
+body{
+    background-color: #fff; /* Define o fundo da página como branco */
+}
+
+header{
+    background-color: black; /* Fundo preto para o cabeçalho */
+    color: white; /* Texto branco no cabeçalho */
+    text-align: center; /* Centraliza o texto dentro do cabeçalho */
+    padding: 10px 0; /* Adiciona espaçamento interno vertical */
+}
+
+.top-header{
+    display: flex; /* Usa flexbox para organizar os elementos */
+    justify-content: space-between; /* Distribui os elementos igualmente */
+    align-items: center; /* Alinha os elementos verticalmente */
+    max-width: 1200px; /* Define uma largura máxima */
+    margin: auto; /* Centraliza horizontalmente */
+    padding: 10px; /* Adiciona espaçamento interno */
+}
+
+.top-header img{
+    height: 70px; /* Define a altura da imagem dentro do cabeçalho */
+}
+
+.contact-info{
+    text-align: right; /* Alinha o texto de contato à direita */
+    font-size: 14px; /* Define um tamanho de fonte menor */
+}
+
+nav{
+    background-color: #f8f8f8; /* Define um fundo claro para a barra de navegação */
+    text-align: center; /* Centraliza os itens do menu */
+    padding: 10px 0; /* Adiciona espaçamento interno vertical */
+}
+
+nav ul{
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Adiciona espaçamento entre os itens */
+}
+
+nav ul li{
+    display: inline; /* Mantém os itens na mesma linha */
+}
+
+nav ul li a{
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: black; /* Define a cor do texto dos links */
+    font-weight: bold; /* Define um peso de fonte maior */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+}
+
+nav ul li a:hover{
+    color: #ff6600; /* Altera a cor do texto ao passar o mouse */
+}
+
+main img{
+    width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    display: block; /* Remove espaços em branco abaixo da imagem */
+}
+
+/* Estilos adicionados */
+.container {
+    width: 90%; /* Define a largura do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px 0; /* Adiciona espaçamento vertical */
+}
+
+.empresa {
+    display: flex; /* Usa flexbox para disposição lado a lado */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Distribui os itens igualmente */
+    margin-top: 20px; /* Adiciona espaçamento superior */
+}
+
+.empresa .texto {
+    width: 50%; /* Define a largura do texto */
+    font-size: 16px; /* Define o tamanho da fonte */
+    color: #555; /* Define a cor do texto */
+    line-height: 1.5; /* Define o espaçamento entre linhas */
+}
+
+.empresa .imagem {
+    width: 45%; /* Define a largura da imagem */
+}
+
+.empresa .imagem img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    border-radius: 5px; /* Arredonda as bordas da imagem */
+}
+
+.produtos {
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: 40px; /* Adiciona espaçamento superior */
+    padding: 20px 0; /* Adiciona espaçamento interno vertical */
+}
+
+.produtos h1 {
+    font-size: 24px; /* Define o tamanho do título */
+    color: #666; /* Define a cor do texto */
+    margin-bottom: 20px; /* Adiciona espaçamento inferior */
+}
+
+.lista-produtos {
+    display: flex; /* Usa flexbox para disposição em linha */
+    flex-wrap: wrap; /* Permite quebra de linha quando necessário */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px; /* Adiciona espaçamento entre os produtos */
+}
+
+.produto {
+    width: 200px; /* Define a largura de cada produto */
+    text-align: center; /* Centraliza o conteúdo */
+    background: #f5f5f5; /* Define um fundo cinza claro */
+    padding: 15px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Arredonda as bordas */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.produto img {
+    width: 100%; /* Ajusta a imagem para ocupar toda a largura do bloco */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Arredonda as bordas da imagem */
+}
+
+.produto h3 {
+    font-size: 16px; /* Define o tamanho do título */
+    color: #333; /* Define a cor do texto */
+    margin-top: 10px; /* Adiciona espaçamento superior */
+}
+
+.produto p {
+    font-size: 14px; /* Define o tamanho do texto */
+    color: #666; /* Define uma cor de texto mais suave */
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao passar o mouse */
+}
+
+@media (max-width: 768px) { /* Aplica regras quando a tela for menor que 768px */
+    .empresa {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+    .empresa .texto {
+        width: 100%; /* Faz o texto ocupar toda a largura */
+    }
+    .empresa .imagem {
+        width: 100%; /* Faz a imagem ocupar toda a largura */
+        margin-top: 20px; /* Adiciona espaçamento superior */
+    }
+    .lista-produtos {
+        flex-direction: column; /* Exibe os produtos em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+}
+.img-pequena {
+    width: 1000px;
+    display: block; /* Torna a imagem um bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+#videos{
+    text-align: center;
+    color: #666;
+}
+.titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#fotostrada{
+  text-align: center;  
+}
